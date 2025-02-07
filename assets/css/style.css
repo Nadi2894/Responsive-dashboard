@@ -24,10 +24,63 @@ body {
   width: 100%;
 }
 
-.navigator {
+.navigaton {
   position: fixed;
   width: 300px;
   height: 100%;
   background: var(--blue);
-  border-left: 10px solid red;
+  border-left: 10px solid var(--blue);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navigaton ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navigaton ul li {
+  position: relative;
+  list-style: none;
+}
+.navigaton ul li:hover {
+  background-color: var(--white);
+}
+
+.navigaton ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+.navigaton ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.navigaton ul li:hover a {
+  color: var(--blue);
+}
+.navigaton ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+.navigaton ul li a .icon ion-icon {
+  font-size: 1.75rem;
+}
+
+.navigaton ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
 }
